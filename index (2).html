@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Losowe przekierowanie</title>
+  <script>
+    const links = [
+      "https://docs.google.com/forms/d/e/1FAIpQLSfkXufDIGw6lUqw7D3-NFRblbW5NT7QZnziMvn25MMWI6-gRw/viewform",
+      "https://docs.google.com/forms/d/e/1FAIpQLSfVmi9Lzt4HkMwDufy8tEleOpaPJW_6KGPxXHLS7JySjVArBA/viewform",
+      "https://docs.google.com/forms/d/e/1FAIpQLScjhWHKQjnJhIxA7B69zImaND4gJtOQPwx_sY5AAtWqDq1-BA/viewform"
+    ];
+
+    const chosen = links[Math.floor(Math.random() * links.length)];
+    window.location.replace(chosen);
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://docs.google.com/forms/d/e/1FAIpQLSfkXufDIGw6lUqw7D3-NFRblbW5NT7QZnziMvn25MMWI6-gRw/viewform">
+  </noscript>
+</head>
+<body>
+  <p>Trwa przekierowywanie... <a id="link" href="#">kliknij tutaj, jeśli nic się nie dzieje</a></p>
+  <script>
+    document.getElementById('link').href = chosen;
+  </script>
+</body>
+</html>
